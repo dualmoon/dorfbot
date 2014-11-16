@@ -41,6 +41,7 @@ module.exports = (robot) ->
         msg.send "I don't wanna"
 
 # general responses for someone saing "hey, hi, yo, etc" to dorfbot
+# uses dorfbotGreetings array
     robot.hear /(hey|yo|hi|hello|what\'s up|what up)\,? dorfbot/i, (msg) ->
         msg.reply msg.random dorfbotGreetings
 
@@ -55,4 +56,9 @@ module.exports = (robot) ->
           msg.send "Who you calling 'slow'?"
         , 60 * 1000
 
+    robot.hear /.*/, (msg) ->
+        random = Math.floor(Math.random() * 100)
+        if random == 100
+            msg.send "THAT'S WHAT SHE SAID!"
+            return
 
