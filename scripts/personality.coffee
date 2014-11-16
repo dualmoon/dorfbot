@@ -44,4 +44,8 @@ module.exports = (robot) ->
     robot.hear /(hey|yo|hi|hello|what\'s up|what up)\,? dorfbot/i, (msg) ->
         msg.reply msg.random dorfbotGreetings
 
+# SETTLE IT IN SMASH!
+    robot.hear /fighting words/i, (msg) ->
+        msg.send "SETTLE IT IN SMASH!"
+
 
