@@ -14,7 +14,7 @@ You can test your hubot by running the following.
 
 You can start dorfbot locally by running:
 
-    % bin/hubot
+    % bin/hubot --name dorfbot
 
 You'll see some start up output about where your scripts come from and a
 prompt:
