@@ -56,6 +56,7 @@ module.exports = (robot) ->
           msg.send "Who you calling 'slow'?"
         , 60 * 1000
 
+# Will randomly reply to anything, THAT'S WHAT SHE SAID
     robot.hear /.*/, (msg) ->
         random = Math.floor(Math.random() * 100)
         if random == 100
