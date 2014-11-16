@@ -48,4 +48,11 @@ module.exports = (robot) ->
     robot.hear /fighting words/i, (msg) ->
         msg.send "SETTLE IT IN SMASH!"
 
+# Tell dorfbot he is slow, he'll respond late
+# Pulled from example
+    robot.respond /you are a little slow/, (msg) ->
+        setTimeout () ->
+          msg.send "Who you calling 'slow'?"
+        , 60 * 1000
+
 
