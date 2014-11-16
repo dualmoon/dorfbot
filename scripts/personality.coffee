@@ -2,4 +2,4 @@
 
 module.exports = (robot) ->
     robot.hear /good dorfbot/i, (msg) ->
-        msg.reply "☺"
+        msg.send "\uD83D\uDE0A" #sweet smile emote
