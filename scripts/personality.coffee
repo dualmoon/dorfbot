@@ -95,3 +95,8 @@ module.exports = (robot) ->
 # Channeling inner muscle man
     robot.hear /^you know who else (.*)\?$/i, (msg) ->
         msg.send msg.random myMom
+
+# Regular Show "OOHHHHH"
+    robot.hear /^O+H{3,}$/, (msg) ->
+        #TODO: randomize given image
+        msg.send "http://goo.gl/Yn8DWv"
