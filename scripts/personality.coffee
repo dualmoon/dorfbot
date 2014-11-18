@@ -13,12 +13,14 @@
 # Author:
 #   dualmoon, sprngr
 
+dorfbotUtils = require('./dorfbot-utils')
+
 # The responses are all based off of strings heard, don't want to flood the commands list
 
 # Greetings array
 dorfbotGreetings = ["Oh hey!",
-                    "What's up?", 
-                    "I missed you ;_;", 
+                    "What's up?",
+                    "I missed you ;_;",
                     "I found this adorable kitty! http://i.imgur.com/R8en7.jpg",
                     "Word to your mother.",
                     "¡Bienvenido!",
@@ -26,24 +28,28 @@ dorfbotGreetings = ["Oh hey!",
                    ]
 
 # Band name phrase array
-bandNamePhrases = ["\"$match\" would be a great name for a band.",
-                  "\"$match\" is an awesome band name.",
-                  "\"$match\" would totally rock for a band name.",
-                  "\"$match\" sounds like a sweet name for a band.",
-                  "You guys know what would be a great name for a band? \"$match\"",
-                  "\"$match\" sounds like one of those new age bands.",
-                  "\"$match\" sounds like a band from the 90's."
-                 ]
+bandNamePhrases = ["\"$0\" would be a great name for a band.",
+                   "\"$0\" is an awesome band name.",
+                   "\"$0\" would totally rock for a band name.",
+                   "\"$0\" sounds like a sweet name for a band.",
+                   "You guys know what would be a great name for a band? \"$0\"",
+                   "\"$0\" sounds like one of those new age bands.",
+                   "\"$0\" sounds like a band from the 90's."
+                  ]
 
 # You know who else is an array of strings? MY MOM!
 myMom = ["My mom!",
          "MY MOM!",
+         "Your mom!",
+         "YOUR MOM!",
          "Your mom!\nhttp://www.wikiwand.com/en/List_of_burn_centers_in_the_United_States"
         ]
 
 # the "brain"
 module.exports = (robot) ->
- 
+
+    dorfbot = new dorfbotUtils
+
 # "Good dorfbot"
     robot.hear /good dorfbot/i, (msg) ->
         msg.send "\uD83D\uDE0A" #sweet smile emote
@@ -67,15 +73,15 @@ module.exports = (robot) ->
 
 # Tell dorfbot he is slow, he'll respond late
 # Pulled from example
-    robot.respond /you are a little slow/, (msg) ->
+    robot.respond /(?:you are|you're) (?:a little)? slow/i, (msg) ->
         setTimeout () ->
           msg.send "Who you calling 'slow'?"
         , 60 * 1000
 
 # Will randomly reply to anything, THAT'S WHAT SHE SAID
     robot.hear /.*/, (msg) ->
-        random = Math.floor(Math.random() * 100)
-        if random == 1
+        random = Math.floor(Math.random() * 500)
+        if random == 0
             msg.send "THAT'S WHAT SHE SAID!"
             return
 
@@ -85,11 +91,12 @@ module.exports = (robot) ->
 
 # That'd be a great band name
     robot.hear /^([\w\?\!\,\.]+ [\w\?\!\,\.]+(?: [\w\?\!\,\.]+)?(?: [\w\?\!\,\.]+)?)$/i, (msg) ->
-        random = Math.floor(Math.random() * 5)
-        if random == 1
-            phrase = msg.random bandNamePhrases
-            phrase = phrase.replace("$match", msg.match[1])
-            msg.send phrase
+        if dorfbot.ignoreListen(msg.message)
+            return
+        
+        random = Math.floor(Math.random() * 1)
+        if random == 0
+            msg.send dorfbot.templateString(msg.match[1], msg.random bandNamePhrases)
             return
 
 # Channeling inner muscle man

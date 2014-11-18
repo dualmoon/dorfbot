@@ -1,5 +1,10 @@
 # Changelog
 
+## 11/18/2014
+* added utils to improve dorfbot's responses, prevents triggering on commands
+* added:
+	* hubot-ikr
+
 ## 11/17/2014 22:50
 * added:
 	* band name generator
