@@ -65,4 +65,4 @@ module.exports = (robot) ->
 
 # And a Star Wars
     robot.respond /execute order 66/i, (msg) ->
-        msg.send "/me kills the younglings"
+        msg.send "_kills the younglings_"
