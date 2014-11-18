@@ -1,10 +1,19 @@
 # Changelog
 
+## 11/17/2014 21:00
+* added:
+	* dorfbot-youtube - replaces standard youtube script
+	* order 66 support
+	
+* removed:
+	* hubot-youtube
+	* factoid - moved to factoid branch for further work
+
 ## 11/17/2014
 * added:
 	* kittyme - second most essential script
 	* factoid - factoid support
-	
+
 ## 11/16/2014 - 14:30
 * added:
 	* storage - Inspect the data in redis easily

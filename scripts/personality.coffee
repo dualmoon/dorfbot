@@ -63,3 +63,6 @@ module.exports = (robot) ->
             msg.send "THAT'S WHAT SHE SAID!"
             return
 
+# And a Star Wars
+    robot.respond /execute order 66/i, (msg) ->
+        msg.send "/me kills the younglings"
