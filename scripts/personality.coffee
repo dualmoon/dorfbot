@@ -25,6 +25,22 @@ dorfbotGreetings = ["Oh hey!",
                     "こんにちは *bows*"
                    ]
 
+# Band name phrase array
+bandNamePhrases = ["\"$match\" would be a great name for a band.",
+                  "\"$match\" is an awesome band name.",
+                  "\"$match\" would totally rock for a band name.",
+                  "\"$match\" sounds like a sweet name for a band.",
+                  "You guys know what would be a great name for a band? \"$match\"",
+                  "\"$match\" sounds like one of those new age bands.",
+                  "\"$match\" sounds like a band from the 90's."
+                 ]
+
+# You know who else is an array of strings? MY MOM!
+myMom = ["My mom!",
+         "MY MOM!",
+         "Your mom!\nhttp://www.wikiwand.com/en/List_of_burn_centers_in_the_United_States"
+        ]
+
 # the "brain"
 module.exports = (robot) ->
  
@@ -59,10 +75,23 @@ module.exports = (robot) ->
 # Will randomly reply to anything, THAT'S WHAT SHE SAID
     robot.hear /.*/, (msg) ->
         random = Math.floor(Math.random() * 100)
-        if random == 100
+        if random == 1
             msg.send "THAT'S WHAT SHE SAID!"
             return
 
 # And a Star Wars
     robot.respond /execute order 66/i, (msg) ->
         msg.send "_kills the younglings_"
+
+# That'd be a great band name
+    robot.hear /^([\w\?\!\,\.]+ [\w\?\!\,\.]+(?: [\w\?\!\,\.]+)?(?: [\w\?\!\,\.]+)?)$/i, (msg) ->
+        random = Math.floor(Math.random() * 5)
+        if random == 1
+            phrase = msg.random bandNamePhrases
+            phrase = phrase.replace("$match", msg.match[1])
+            msg.send phrase
+            return
+
+# Channeling inner muscle man
+    robot.hear /^you know who else (.*)\?$/i, (msg) ->
+        msg.send msg.random myMom

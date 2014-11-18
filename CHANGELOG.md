@@ -1,10 +1,15 @@
 # Changelog
 
+## 11/17/2014 22:50
+* added:
+	* band name generator
+	* your mom
+
 ## 11/17/2014 21:00
 * added:
 	* dorfbot-youtube - replaces standard youtube script
 	* order 66 support
-	
+
 * removed:
 	* hubot-youtube
 	* factoid - moved to factoid branch for further work
