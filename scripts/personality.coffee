@@ -47,8 +47,7 @@ myMom = ["My mom!",
 
 # the "brain"
 module.exports = (robot) ->
-
-    dorfbot = new dorfbotUtils
+    dorfbot = new dorfbotUtils robot
 
 # "Good dorfbot"
     robot.hear /good dorfbot/i, (msg) ->
@@ -80,6 +79,9 @@ module.exports = (robot) ->
 
 # Will randomly reply to anything, THAT'S WHAT SHE SAID
     robot.hear /.*/, (msg) ->
+        if dorfbot.ignoreListen(msg.message)
+            return
+            
         random = Math.floor(Math.random() * 500)
         if random == 0
             msg.send "THAT'S WHAT SHE SAID!"

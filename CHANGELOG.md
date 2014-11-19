@@ -1,5 +1,10 @@
 # Changelog
 
+## 11/19/2014
+* fixes dorfbot utils
+* added:
+	* regular show responder
+
 ## 11/18/2014
 * added utils to improve dorfbot's responses, prevents triggering on commands
 * added:
