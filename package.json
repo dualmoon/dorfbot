@@ -1,11 +1,11 @@
 {
   "name": "dorfbot",
-  "version": "0.0.0",
+  "version": "0.9.0",
   "private": true,
   "author": "Michael Springer <mike@sprngr.me>",
-  "description": "A somewhat helpful robot",
+  "description": "A somewhat \"helpful\" robot",
   "dependencies": {
-    "dorfbot-rpgdice": "^1.0.1",
+    "dorfbot-rpgdice": "^1.0.3",
     "dorfbot-youtube": "^0.1.0",
     "hubot": "^2.9.3",
     "hubot-diagnostics": "0.0.1",
