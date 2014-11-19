@@ -42,8 +42,23 @@ myMom = ["My mom!",
          "MY MOM!",
          "Your mom!",
          "YOUR MOM!",
-         "Your mom!\nhttp://www.wikiwand.com/en/List_of_burn_centers_in_the_United_States"
+         "Your mom!\nhttp://www.wikiwand.com/en/List_of_burn_centers_in_the_United_States",
+         "https://38.media.tumblr.com/tumblr_m60268QUxC1rz0r9wo1_500.gif"
         ]
+
+# OOOHHHHHH!!!
+regularShoohhhArray = ["http://airsi.de/img/oohhh/Cuties+Fanart.gif",
+                       "http://airsi.de/img/oohhh/Ducklings.gif",
+                       "http://airsi.de/img/oohhh/Mordecai+Ducklings.gif",
+                       "http://airsi.de/img/oohhh/Mordecai+Rigby+Ducklings.gif",
+                       "http://airsi.de/img/oohhh/Mordecai+Rigby.gif",
+                       "http://airsi.de/img/oohhh/Mordecai+Rigby-2.gif",
+                       "http://airsi.de/img/oohhh/Mordecai+Rigby-3.gif",
+                       "http://airsi.de/img/oohhh/Mordecai+Rigby-4.gif",
+                       "http://airsi.de/img/oohhh/Mordecai+Rigby-rolling-out.gif",
+                       "https://33.media.tumblr.com/tumblr_mb646m565Z1rhxn6ro1_500.gif",
+                       "http://25.media.tumblr.com/6c2d951985f1e43cd2915738ee91aa3d/tumblr_mjuiwzRboL1rn2utdo3_500.gif"
+                      ]
 
 # the "brain"
 module.exports = (robot) ->
@@ -106,5 +121,5 @@ module.exports = (robot) ->
         msg.send msg.random myMom
 
 # Regular Show "OOHHHHH"
-    robot.hear /^O+H{3,}$/, (msg) ->
-        msg.send "http://airsi.de/img/oohhh/?t="+new Date().getTime()
+    robot.hear /^o+h{3,}!*$/i, (msg) ->
+        msg.send msg.random regularShoohhhArray

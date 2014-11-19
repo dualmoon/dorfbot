@@ -4,6 +4,7 @@
 * fixes dorfbot utils
 * added:
 	* regular show responder
+	* beerme
 
 ## 11/18/2014
 * added utils to improve dorfbot's responses, prevents triggering on commands
