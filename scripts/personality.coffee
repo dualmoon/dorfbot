@@ -29,6 +29,7 @@ dorfbotGreetings = ["Oh hey!",
 
 # Band name phrase array
 bandNamePhrases = ["\"$0\" would be a great name for a band.",
+                   "\"$0\" would make a good name for a band.",
                    "\"$0\" is an awesome band name.",
                    "\"$0\" would totally rock for a band name.",
                    "\"$0\" sounds like a sweet name for a band.",
