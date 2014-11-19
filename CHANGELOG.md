@@ -1,5 +1,8 @@
 # Changelog
 
+## 11/19/2014 01:00
+* adds random back to band name gen
+
 ## 11/19/2014
 * fixes dorfbot utils
 * added:

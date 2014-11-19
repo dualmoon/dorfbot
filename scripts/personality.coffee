@@ -111,7 +111,7 @@ module.exports = (robot) ->
         if dorfbot.ignoreListen(msg.message)
             return
         
-        random = Math.floor(Math.random() * 1)
+        random = Math.floor(Math.random() * 50)
         if random == 0
             msg.send dorfbot.templateString(msg.match[1], msg.random bandNamePhrases)
             return
