@@ -1,5 +1,10 @@
 # Changelog
 
+## 11/19 02:00
+* Overhauls script organization structure
+* moves:
+	* hubot-ikr -> personality.affirmations
+
 ## 11/19/2014 01:00
 * adds random back to band name gen
 

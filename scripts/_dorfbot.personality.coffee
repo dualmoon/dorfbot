@@ -13,7 +13,7 @@
 # Author:
 #   dualmoon, sprngr
 
-dorfbotUtils = require('./dorfbot-utils')
+dorfbotUtils = require('./_dorfbot.utils')
 
 # The responses are all based off of strings heard, don't want to flood the commands list
 
