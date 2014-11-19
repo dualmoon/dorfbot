@@ -5,7 +5,7 @@
   "author": "Michael Springer <mike@sprngr.me>",
   "description": "A somewhat \"helpful\" robot",
   "dependencies": {
-    "dorfbot-rpgdice": "^1.0.3",
+    "dorfbot-rpgdice": "^1.0.5",
     "dorfbot-youtube": "^0.1.0",
     "hubot": "^2.9.3",
     "hubot-diagnostics": "0.0.1",
