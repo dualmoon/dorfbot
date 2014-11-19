@@ -1,5 +1,10 @@
 # Changelog
 
+## 11/19 15:00 v1.0.0
+* Swaps hubot for the airbot fork
+* Enables symbol mapping of ! to dorfbot
+* Praying to God this doesn't explode
+
 ## 11/19 02:00 v0.9.0
 * Overhauls script organization structure
 * moves:
