@@ -1,5 +1,9 @@
 # Changelog
 
+## 11/19 01:40
+* moves:
+	* hubot-ikr -> affirmations
+	
 ## 11/19/2014 01:00
 * adds random back to band name gen
 
