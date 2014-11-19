@@ -104,3 +104,7 @@ module.exports = (robot) ->
 # Channeling inner muscle man
     robot.hear /^you know who else (.*)\?$/i, (msg) ->
         msg.send msg.random myMom
+
+# Regular Show "OOHHHHH"
+    robot.hear /^O+H{3,}$/, (msg) ->
+        msg.send "http://airsi.de/img/oohhh/?t="+new Date().getTime()
