@@ -1,2 +1,2 @@
 #!/bin/bash
-./bin/hubot --name dorfbot --trigger !
+./bin/hubot --name dorfbot --symbol !
