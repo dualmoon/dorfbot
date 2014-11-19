@@ -98,5 +98,4 @@ module.exports = (robot) ->
 
 # Regular Show "OOHHHHH"
     robot.hear /^O+H{3,}$/, (msg) ->
-        #TODO: randomize given image
         msg.send "http://airsi.de/img/oohhh/?t="+new Date().getTime()
