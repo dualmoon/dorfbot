@@ -35,7 +35,7 @@ rootContents = (name, stat) ->
   </head>
   <body>
   <h1>#{name}</h1>
-  <img src="#{stat}"/>
+  <img src="#{stat}/dorfbot.png"/>
   </body>
   </html>
   """
