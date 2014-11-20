@@ -53,3 +53,7 @@ module.exports = (robot) ->
     res.setHeader 'content-type', 'text/html'
     res.end rootContents robot.name, stat
 
+  robot.router.post '/cmd/echo/:text', (req, res) ->
+    string = req.params.text
+
+    res.send string
