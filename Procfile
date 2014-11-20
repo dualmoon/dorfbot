@@ -1,1 +1,1 @@
-web: bin/hubot -a slack -n dorfbot -s !
+web: bin/hubot -a slack -n dorfbot -l !
