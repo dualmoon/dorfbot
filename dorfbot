@@ -1,2 +1,2 @@
 #!/bin/bash
-./bin/hubot --name dorfbot --symbol !
+./bin/hubot --name dorfbot --alias !
