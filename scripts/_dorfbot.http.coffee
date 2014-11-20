@@ -44,6 +44,8 @@ module.exports = (robot) ->
 
   robot.router.get '/', (req, res) ->
 
+    stat = __dirname + process.env.EXPRESS_STATIC
+
     res.setHeader 'content-type', 'text/html'
-    res.end rootContents robot.name, process.env.EXPRESS_STATIC
+    res.end rootContents robot.name, stat
 
