@@ -1,14 +1,16 @@
 # dorfbot http endpoints
 
-rootContents = (robot, static) ->
+module.exports = (robot) ->
 
-"""
-<!DOCTYPE html>
-<html>
-  <head>
-  <meta charset="utf-8">
-  <title>#{robot.name}</title>
-  <style type="text/css">
+  rootContents = 
+
+    """
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <meta charset="utf-8">
+    <title>{name}</title>
+    <style type="text/css">
     body {
       background: #d3d6d9;
       color: #636c75;
@@ -30,18 +32,17 @@ rootContents = (robot, static) ->
     p:last-child {
       border: 0;
     }
-  </style>
-  </head>
-  <body>
-    <h1>#{robot.name}</h1>
-    <img src="#{static}"/>
-  </body>
-</html>
-  """
+    </style>
+    </head>
+    <body>
+    <h1>{name}</h1>
+    <img src="{stat}"/>
+    </body>
+    </html>
+    """
 
-module.exports = (robot) ->
-  robot.router.get '/', (req, res) ->
-    static = process.env.EXPRESS_STATIC
+    robot.router.get '/', (req, res) ->
 
-    res.setHeader 'content-type', 'text/html'
-    res.end rootContents robot, static
+      res.setHeader 'content-type', 'text/html'
+      res.end rootContents
+      
