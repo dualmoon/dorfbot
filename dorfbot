@@ -1,2 +1,4 @@
 #!/bin/bash
+export GITHUB_MASTER_RAW=https://raw.githubusercontent.com/sprngr/dorfbot/master/
+
 ./bin/hubot --name dorfbot

@@ -33,7 +33,7 @@ rootContents = (name, stat) ->
   </head>
   <body>
   <h1>#{name}</h1>
-  <img src="#{stat}/dorfbot.png"/>
+  <img src="#{stat}assets/dorfbot.png"/>
   </body>
   </html>
   """
@@ -42,7 +42,7 @@ module.exports = (robot) ->
 
   robot.router.get '/', (req, res) ->
 
-    stat = '/assets'
+    stat = process.env.GITHUB_MASTER_RAW
 
     res.setHeader 'content-type', 'text/html'
     res.end rootContents robot.name, stat
