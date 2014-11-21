@@ -47,8 +47,17 @@ module.exports = (robot) ->
     res.setHeader 'content-type', 'text/html'
     res.end rootContents robot.name, stat
 
-  robot.router.post '/cmd/echo', (req, res) ->
+  robot.router.get '/cmd/echo', (req, res) ->
     string = "No text sent"
     string = req.param('text') if req.param('text')
 
-    res.send string
+    res.send "param channel_name is: #{req.param 'channel_name'}, param user_name is: #{req.param 'user_name'}, string is: #{string}"
+    
+    robot.messageRoom 'development', 'echo!'
+
+#  robot.router.post '/cmd/echo/loud', (req, res) ->
+#    string = "No text sent"
+#    string = req.param('text') if req.param('text')
+#    
+#    res.status(200).end()
+#    robot.messageRoom
