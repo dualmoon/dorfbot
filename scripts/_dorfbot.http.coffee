@@ -1,9 +1,5 @@
 # dorfbot http endpoints
 
-# dorfbot http endpoints
-
-express = require 'express'
-
 rootContents = (name, stat) ->
   """
   <!DOCTYPE html>
@@ -43,8 +39,6 @@ rootContents = (name, stat) ->
   """
 
 module.exports = (robot) ->
-
-  robot.router.use(express.static(__dirname+process.env.EXPRESS_STATIC))
 
   robot.router.get '/', (req, res) ->
 

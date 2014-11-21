@@ -122,5 +122,5 @@ module.exports = (robot) ->
         msg.send msg.random myMom
 
 # Regular Show "OOHHHHH"
-    robot.hear /^o+h{3,}!*$/i, (msg) ->
+    robot.hear /^o+h{3,}!*$/, (msg) ->
         msg.send msg.random regularShoohhhArray
