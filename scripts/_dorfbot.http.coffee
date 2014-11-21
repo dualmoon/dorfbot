@@ -53,7 +53,7 @@ module.exports = (robot) ->
 
     res.send "param channel_name is: #{req.param 'channel_name'}, param user_name is: #{req.param 'user_name'}, string is: #{string}"
     
-    robot.messageRoom 'development', 'echo!'
+    robot.messageRoom req.param('channel_id'), 'echo!' unless req.param 'channel_name'=='directmessage'
 
 #  robot.router.post '/cmd/echo/loud', (req, res) ->
 #    string = "No text sent"
