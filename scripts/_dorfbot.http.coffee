@@ -47,7 +47,7 @@ module.exports = (robot) ->
     res.setHeader 'content-type', 'text/html'
     res.end rootContents robot.name, stat
 
-  robot.router.get '/cmd/echo', (req, res) ->
+  robot.router.post '/cmd/echo', (req, res) ->
     string = "No text sent"
     string = req.param('text') if req.param('text')
 
