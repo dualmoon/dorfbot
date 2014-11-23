@@ -1,4 +1,5 @@
 #!/bin/bash
 export GITHUB_MASTER_RAW=https://raw.githubusercontent.com/sprngr/dorfbot/master/
+export EXPRESS_STATIC=`pwd`/assets
 
 ./bin/hubot --name dorfbot
