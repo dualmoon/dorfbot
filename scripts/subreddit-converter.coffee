@@ -19,7 +19,7 @@ request = require 'request'
 module.exports = (robot) ->
 
 # Converts to subreddit url
-    robot.hear /\/?r\/(.*)/i, (msg) ->
+    robot.hear /\/?r\/(\w+)/i, (msg) ->
         urlString = msg.message.toString()
         
         if urlString.indexOf("reddit.com") != -1
@@ -41,7 +41,7 @@ module.exports = (robot) ->
             msg.send "*#{subUrl}:* #{title}#{' - ' if desc}#{desc}\nhttp://reddit.com#{subUrl}"
 
 # Converts to reddit user link
-    robot.hear /\/?u\/(.*)/i, (msg) ->
+    robot.hear /\/?u\/(\w+)/i, (msg) ->
         urlString = msg.message.toString()
         if urlString.indexOf("reddit.com") != -1
             return
