@@ -1,6 +1,8 @@
 # dorfbot http endpoints
 engines = require 'consolidate'
 
+process.env.EXPRESS_STATIC = process.cwd()
+
 module.exports = (robot) ->
   robot.router.engine 'mustache', engines.mustache 
 
