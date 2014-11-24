@@ -31,7 +31,7 @@ module.exports = (robot) ->
             if JSON.parse(body).error == 404
                 return
 
-            title = JSON.parse(body).data.url
+            title = JSON.parse(body).data.title
             subUrl = JSON.parse(body).data.url
             desc = JSON.parse(body).data.public_description
 
