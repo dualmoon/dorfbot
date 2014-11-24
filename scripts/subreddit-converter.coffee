@@ -31,12 +31,14 @@ module.exports = (robot) ->
             if JSON.parse(body).error == 404
                 return
 
+            title = JSON.parse(body).data.url
             subUrl = JSON.parse(body).data.url
+            desc = JSON.parse(body).data.public_description
 
             unless subUrl?
                 return
 
-            msg.send "http://reddit.com"+subUrl
+            msg.send "#{title} - #{desc}\nhttp://reddit.com#{subUrl}"
 
 # Converts to reddit user link
     robot.hear /\/?u\/(.*)/i, (msg) ->
@@ -44,5 +46,15 @@ module.exports = (robot) ->
         if urlString.indexOf("reddit.com") != -1
             return
 
-        msg.send "http://reddit.com/u/"+msg.match[1]
+        request.get location, (err, res, body) ->
+            if JSON.parse(body).error == 404
+                return
+
+            name = JSON.parse(body).data.name
+
+            unless subUrl?
+                return
+
+            msg.send "#{name} - http://reddit.com/u/#{name}"
+
 
