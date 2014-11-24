@@ -46,6 +46,8 @@ module.exports = (robot) ->
         if urlString.indexOf("reddit.com") != -1
             return
 
+        location = "http://reddit.com/u/"+msg.match[1]+"/about.json"
+
         request.get location, (err, res, body) ->
             if JSON.parse(body).error == 404
                 return
