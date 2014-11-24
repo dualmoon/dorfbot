@@ -54,7 +54,7 @@ module.exports = (robot) ->
 
             name = JSON.parse(body).data.name
 
-            unless subUrl?
+            unless name?
                 return
 
             msg.send "#{name} - http://reddit.com/u/#{name}"
