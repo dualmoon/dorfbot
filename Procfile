@@ -1,1 +1,1 @@
-web: ./dorfbot
+web: sh dorfbot

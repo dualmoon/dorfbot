@@ -3,9 +3,9 @@ export GITHUB_MASTER_RAW=https://raw.githubusercontent.com/sprngr/dorfbot/master
 export EXPRESS_STATIC=`pwd`/assets
 
 if [ -z "$HEROKU_URL" ]; then
-    ./bin/hubot -a slack -n dorfbot
-else    
     ./bin/hubot -n dorfbot
+else 
+    ./bin/hubot -a slack -n dorfbot
 fi
 
 
