@@ -12,4 +12,4 @@ module.exports = (robot) ->
     string = "No text sent"
     string = req.param('text') if req.param('text')
     res.status(200).end()
-    robot.messageRoom req.param('channel_id'), "Many Bathans died to bring you this message (#{req.param('channel_name')}): #{string}"
+    robot.messageRoom req.param('channel_id'), "#{string}"
