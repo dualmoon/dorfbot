@@ -1,5 +1,5 @@
 <p align="center">
-    <img height="25%" width="25%" src="https://raw.githubusercontent.com/sprngr/dorfbot/master/assets/images/dorfbot.svg">
+    <img height="25%" width="25%" src="https://raw.githubusercontent.com/sprngr/dorfbot/master/assets/images/dorfbot.png">
 </p>
 
 # dorfbot
