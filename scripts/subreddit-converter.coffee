@@ -3,7 +3,7 @@
 #   mentioned in chat
 #
 # Dependencies:
-#   None
+#   "request" : "2.48.0"
 #
 # Configuration:
 #   None
@@ -13,6 +13,8 @@
 #
 # Author:
 #   sprngr
+
+request = require 'request'
 
 module.exports = (robot) ->
 
@@ -25,8 +27,9 @@ module.exports = (robot) ->
         
         location = "http://reddit.com/r/"+msg.match[1]+"/about.json"
         
-        robot.http(location).get() (err, res, body) ->
-            return if JSON.parse(body).error == 404
+        request.get location, (err, res, body) ->
+            if JSON.parse(body).error == 404
+                return
 
             subUrl = JSON.parse(body).data.url
 
