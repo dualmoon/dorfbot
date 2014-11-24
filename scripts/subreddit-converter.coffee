@@ -38,7 +38,7 @@ module.exports = (robot) ->
             unless subUrl?
                 return
 
-            msg.send "#{title} - #{desc}\nhttp://reddit.com#{subUrl}"
+            msg.send "#{subUrl}: #{title}#{' - ' if desc}#{desc}\nhttp://reddit.com#{subUrl}"
 
 # Converts to reddit user link
     robot.hear /\/?u\/(.*)/i, (msg) ->
