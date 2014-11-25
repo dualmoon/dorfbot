@@ -1,11 +1,10 @@
 #!/bin/bash
 export GITHUB_MASTER_RAW=https://raw.githubusercontent.com/sprngr/dorfbot/master/
 export EXPRESS_STATIC=`pwd`/assets
+export HUBOT_PUSHBULLET_API_KEY=qdsKk7vk71ackI3JAkobKlD3hoGwXDPD
 
 if [ -z "$HEROKU_URL" ]; then
     ./bin/hubot -n dorfbot
 else 
     ./bin/hubot -a slack -n dorfbot
 fi
-
-

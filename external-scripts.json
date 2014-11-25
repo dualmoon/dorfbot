@@ -8,5 +8,6 @@
   "hubot-rules",
   "hubot-shipit",
   "dorfbot-youtube",
-  "dorfbot-rpgdice"
+  "dorfbot-rpgdice",
+  "hubot-pushbullet"
 ]
